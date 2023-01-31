@@ -9,7 +9,7 @@ import Banner from '@/components/Banner'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home(data) {
   return (
     <>
     <Head>
@@ -19,16 +19,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Header/>
+    <Header price = {data.data[0]}/>
 
     <main className='main'>
       <Banner/>
       <Community/>
-      <Stat/>
+      <Stat data = {data.data[0]}/>
       <Guide/>
     </main>
 
     <Footer/>
     </>
   )
+}
+
+
+export async function getServerSideProps() {
+
+  const req = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+  const data = await req.json()
+  return {
+    props: { data}, // will be passed to the page component as props
+  }
 }

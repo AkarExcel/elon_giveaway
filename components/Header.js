@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Header = () => {
+const Header = ({price}) => {
+  console.log(price)
   return (
     <>
 <header className="header">
@@ -49,7 +50,7 @@ const Header = () => {
                 href="https://coinmarketcap.com/currencies/dogelon/"
                 target="_blank"
               >
-                $<span id="priceHeader">0.000000000</span>
+                $<span id="priceHeader">{price.current_price}</span>
               </Link>
             </div>
           </div>
