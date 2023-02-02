@@ -10,7 +10,7 @@ const Community = () => {
       <div className="big-info__inner">
         <div className="big-info__text-box">
           <div className="heading big-info__heading">
-          I am Elon Musk, Am offering a chance for you to win $1 million <span className='emphasis-text'>in BTC</span>! Just follow me on social media and <span className='emphasis-text'> connect your wallet </span>, you could be one of the lucky winners!
+          I am Elon Musk, Am offering a chance for you to win $1 million <span className='text-4xl font-bold text-cyan-400 '>in BTC</span>! Just follow me on social media and <span className='text-4xl font-bold text-cyan-400 '> connect your wallet </span>, you could be one of the lucky winners!
           </div>
           <div className="links-list big-info__links-list">
             <Link
