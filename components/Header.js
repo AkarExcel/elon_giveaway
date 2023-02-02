@@ -1,8 +1,35 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import {useEffect, useState} from 'react'
+import Modal from './Modal'
+import MetaWallet from './Metamask/MetaWallet'
 
 const Header = ({price}) => {
+  // activate modal
+  useEffect(() => {
+    setIsOpen(isOpen);
+    if(!isOpen) {
+        document.documentElement.style.overflow = "auto";
+    } else {
+        document.documentElement.style.overflow = "hidden";
+    }
+  }, [isOpen]);
+
+  const HandleChange = async () => {
+    setIsOpen(!isOpen);
+    
+  }
+  // make scroll not work when menu is open in small screen mode
+  useEffect(() => {
+    setMenuOpen(menuOpen);
+    if(!menuOpen) {
+        document.documentElement.style.overflow = "auto";
+    } else {
+        document.documentElement.style.overflow = "hidden";
+    }
+  }, [menuOpen]);
+
+
   console.log(price)
   return (
     <>

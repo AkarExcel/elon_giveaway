@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Community = () => {
@@ -52,7 +53,7 @@ const Community = () => {
                 className="links-list__icon"
               />
             </a>
-            <a
+            <Link
               target="_blank"
               href="https://www.coingecko.com/en/coins/dogelon-mars"
               className="links-list__link"
@@ -64,8 +65,8 @@ const Community = () => {
                 height={40}
                 className="links-list__icon"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               target="_blank"
               href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3"
               className="links-list__link"
@@ -77,8 +78,8 @@ const Community = () => {
                 height={40}
                 className="links-list__icon"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               target="_blank"
               href="https://etherscan.io/token/0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3"
               className="links-list__link"
@@ -90,7 +91,7 @@ const Community = () => {
                 height={40}
                 className="links-list__icon"
               />
-            </a>
+            </Link>
           </div>
         </div>
         <img
@@ -135,13 +136,13 @@ const Community = () => {
               <span className="follow__amount">650K+</span>
               <span className="follow__followers">followers</span>
               <div className="follow__bttn">
-                <a
+                <Link
                   target="_blank"
                   href="https://twitter.com/dogelonmars"
                   className="bttn__follow"
                 >
                   Follow
-                </a>
+                </Link>
               </div>
             </div>
             <div className="join-the-community__socmedia-img-wrap">
@@ -179,13 +180,13 @@ const Community = () => {
               <span className="follow__amount">90K+</span>
               <span className="follow__followers">followers</span>
               <div className="follow__bttn">
-                <a
+                <Link
                   target="_blank"
                   href="https://t.me/dogelonmars"
                   className="bttn__follow"
                 >
                   Follow
-                </a>
+                </Link>
               </div>
             </div>
             <div className="join-the-community__socmedia-img-wrap">
@@ -207,13 +208,13 @@ const Community = () => {
             />
           </div>
           <div className="get-stiker-pack__bttn-wrap">
-            <a
+            <Link
               target="_blank"
               href="https://t.me/addstickers/DogelonMarsStickers"
               className="get-stiker-pack__bttn"
             >
               Download
-            </a>
+            </Link>
           </div>
         </div>
       </div>
