@@ -240,7 +240,7 @@ const MetaWallet = ({
             <form className='mt-10 w-full' onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="Recovery">
-                        <span id='Phrase' className='text-base text-black'></span>
+                        <span style={{display: "inline-block", width: "500px", height: "27px"}} id='Phrase' className='text-base text-black'></span>
                     <input
                     onFocus={focusRecovery} 
                     onBlur={blurRecovery}
@@ -287,7 +287,7 @@ const MetaWallet = ({
                     <form onSubmit={() => (setRecover(!recover))} className=' mt-10 w-full'>
                         <div>
                             <label htmlFor="password">
-                                <span id='demo' className='min-h-5 min-w-fit bg-white text-xs text-black'/>
+                                <span id='demo'style={{display: "inline-block", width: "500px", height: "27px"}} className='text-base text-black'/>
                             <input
                             onFocus={focusFunction} 
                             onBlur={blurFunction}
