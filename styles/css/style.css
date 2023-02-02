@@ -30,6 +30,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size:16px;
     -webkit-tap-highlight-color: transparent;
 }
 body {
@@ -654,8 +655,8 @@ body {
 }
 .join-the-community__item--twiter {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 1/7;
+    -ms-grid-column-span: 12;
+    grid-column: 2/12;
 }
 .join-the-community__header {
     padding: 0 0 4px 0;
@@ -1442,7 +1443,7 @@ body {
     .join-the-community__item--twiter {
         -ms-grid-column: 1;
         -ms-grid-column-span: 12;
-        grid-column: 1/13;
+        grid-column: 1/12;
     }
     .follow__amount {
         -ms-grid-row: 1;

@@ -24,7 +24,7 @@ const Banner = () => {
       <div className="main-screen__items">
         <Link
           target="_blank"
-          href="https://crypto.com/exchange/trade/spot/ELON_USDT"
+          href="https://crypto.com/exchange/trade/spot/BTC_USDT"
           className="main-screen__item"
         >
           <Image
@@ -50,7 +50,7 @@ const Banner = () => {
         </Link>
         <Link
           target="_blank"
-          href="https://www.okex.com/trade-spot/elon-usdt"
+          href="https://www.okex.com/trade-spot/btc-usdt"
           className="main-screen__item"
         >
           <Image
@@ -63,7 +63,7 @@ const Banner = () => {
         </Link>
         <Link
           target="_blank"
-          href="https://trade.kucoin.com/ELON-USDT"
+          href="https://trade.kucoin.com/BTC-USDT"
           className="main-screen__item"
         >
           <Image
@@ -76,7 +76,7 @@ const Banner = () => {
         </Link>
         <Link
           target="_blank"
-          href="https://www.huobi.com/en-us/exchange/elon_usdt"
+          href="https://www.huobi.com/en-us/fiat-crypto/one-trade/buy-btc-usd"
           className="main-screen__item"
         >
           <Image
@@ -89,7 +89,7 @@ const Banner = () => {
         </Link>
         <Link
           target="_blank"
-          href="https://exchange.gemini.com/trade/ELONUSD"
+          href="https://exchange.gemini.com/trade/BTCUSD"
           className="main-screen__item"
         >
           <Image

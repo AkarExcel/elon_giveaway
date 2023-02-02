@@ -1,2 +1,29 @@
+
 @import url("css/style.css");
 @import url("css/swiper.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.emphasis-text{
+    color: cyan;
+}
+
+.pulsate {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+

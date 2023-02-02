@@ -1,10 +1,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import Modal from './Modal'
 import MetaWallet from './Metamask/MetaWallet'
 
 const Header = ({price}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [connect, setConnect] = useState("false")
+
+useEffect(() => {
+    console.log(localStorage.getItem('wallet-connected'))
+    const stored = localStorage.getItem('wallet-connected');
+    setConnect(stored === "true" ? "true" : "false");
+}, []);
+//set 
+  useEffect(() => {
+    console.log(localStorage.getItem('wallet-connected'))
+    localStorage.setItem('wallet-connected', connect);
+  }, [connect]);
+
+
+
   // activate modal
   useEffect(() => {
     setIsOpen(isOpen);
@@ -19,18 +34,7 @@ const Header = ({price}) => {
     setIsOpen(!isOpen);
     
   }
-  // make scroll not work when menu is open in small screen mode
-  useEffect(() => {
-    setMenuOpen(menuOpen);
-    if(!menuOpen) {
-        document.documentElement.style.overflow = "auto";
-    } else {
-        document.documentElement.style.overflow = "hidden";
-    }
-  }, [menuOpen]);
 
-
-  console.log(price)
   return (
     <>
 <header className="header">
@@ -73,12 +77,19 @@ const Header = ({price}) => {
                 className="header__sm-info-icon"
                 id="arrowIconForWidgetHeader"
               />
-              <Link
-                href="https://coinmarketcap.com/currencies/dogelon/"
-                target="_blank"
+              <MetaWallet
+                HandleChange={HandleChange}
+                setIsOpen={setIsOpen}
+                isOpen={isOpen}
+                setConnect={setConnect}
               >
-                $<span id="priceHeader">{price.current_price}</span>
-              </Link>
+                <div>
+                {connect === "true"
+                ? <span id="priceHeader">${" "}{price.current_price}</span>
+                : <hi className="pulsate"> Connect wallet</hi>
+                }
+                </div>
+              </MetaWallet>
             </div>
           </div>
         </div>

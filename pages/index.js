@@ -7,7 +7,6 @@ import Guide from '@/components/Guide'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(data) {
   return (
@@ -34,9 +33,12 @@ export default function Home(data) {
 }
 
 
-export async function getServerSideProps() {
-
-  const req = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+export async function getServerSideProps({req, res}) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  req = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false')
   const data = await req.json()
   return {
     props: { data}, // will be passed to the page component as props

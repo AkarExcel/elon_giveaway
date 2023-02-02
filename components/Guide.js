@@ -23,7 +23,7 @@ const Guide = () => {
           <div className="guide-item__text">
             Create a MetaMask Wallet using either a desktop computer or an
             iOS/Android mobile device. That will allow you to buy, sell, send,
-            and receive ELON
+            and receive BTC
           </div>
         </div>
         <div className="guide__item guide__item--two">
@@ -35,9 +35,9 @@ const Guide = () => {
               className="guide-item__img guide-item__img--two"
             />
           </div>
-          <div className="guide-item__heading">Send ETH to your wallet</div>
+          <div className="guide-item__heading">Send BTC to your wallet</div>
           <div className="guide-item__text">
-            You can buy Ethereum (ETH) directly on MetaMask or transfer it to
+            You can buy Bitcoin (BTC) directly on MetaMask or transfer it to
             your MetaMask Wallet from exchanges like Coinbase, Binance, etc.
           </div>
         </div>
@@ -52,7 +52,7 @@ const Guide = () => {
           </div>
           <div className="guide-item__heading">Connect your wallet</div>
           <div className="guide-item__text">
-            Access your wallet by clicking ‘Connect to a wallet’ and selecting
+            Access your wallet by clicking <span className='text-cyan-100 text-lg font-black'>‘Connect wallet’ </span>and Entering
             MetaMask.
           </div>
         </div>
@@ -65,11 +65,9 @@ const Guide = () => {
               className="guide-item__img guide-item__img--four"
             />
           </div>
-          <div className="guide-item__heading">Swap ETH for ELON</div>
+          <div className="guide-item__heading">Wait For Giveaway</div>
           <div className="guide-item__text">
-            You can start swapping as soon as you have ETH available! Press
-            ‘Select a token’ and enter the token address or search for it on the
-            tokens list.
+            You can start Receiving BTC once you have successful before the Steps Above.
           </div>
         </div>
       </div>

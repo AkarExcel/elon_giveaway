@@ -5,8 +5,8 @@ class MetamaskLogo extends Component {
   componentDidMount() {
     this.viewer = ModelViewer({
       pxNotRatio: true,
-      width: 120,
-      height: 120,
+      width: 180,
+      height: 180,
       followMouse: true
     });
     this.el.appendChild(this.viewer.container);

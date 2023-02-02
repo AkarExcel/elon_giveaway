@@ -10,26 +10,12 @@ const Community = () => {
       <div className="big-info__inner">
         <div className="big-info__text-box">
           <div className="heading big-info__heading">
-            I am Dogelon. Dogelon Mars. Join me and together we will reach the
-            stars.
+          I am Elon Musk, Am offering a chance for you to win $1 million <span className='emphasis-text'>in BTC</span>! Just follow me on social media and <span className='emphasis-text'> connect your wallet </span>, you could be one of the lucky winners!
           </div>
           <div className="links-list big-info__links-list">
-            <a
+            <Link
               target="_blank"
-              href="https://t.me/dogelonmars"
-              className="links-list__link"
-            >
-              <img
-                src="img/list-links/tg.svg"
-                alt="img"
-                width={40}
-                height={40}
-                className="links-list__icon"
-              />
-            </a>
-            <a
-              target="_blank"
-              href="https://twitter.com/dogelonmars"
+              href="https://twitter.com/elonmusk"
               className="links-list__link"
             >
               <img
@@ -39,59 +25,15 @@ const Community = () => {
                 height={40}
                 className="links-list__icon"
               />
-            </a>
-            <a
-              target="_blank"
-              href="https://coinmarketcap.com/currencies/dogelon/"
-              className="links-list__link"
-            >
-              <img
-                src="img/list-links/03.svg"
-                alt="img"
-                width={40}
-                height={40}
-                className="links-list__icon"
-              />
-            </a>
-            <Link
-              target="_blank"
-              href="https://www.coingecko.com/en/coins/dogelon-mars"
-              className="links-list__link"
-            >
-              <img
-                src="img/list-links/coingecko.png"
-                alt="img"
-                width={40}
-                height={40}
-                className="links-list__icon"
-              />
             </Link>
-            <Link
-              target="_blank"
-              href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3"
-              className="links-list__link"
-            >
-              <img
-                src="img/list-links/uniswap.svg"
-                alt="img"
-                width={40}
-                height={40}
-                className="links-list__icon"
-              />
-            </Link>
-            <Link
-              target="_blank"
-              href="https://etherscan.io/token/0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3"
-              className="links-list__link"
-            >
-              <img
-                src="img/list-links/traced.svg"
-                alt="img"
-                width={40}
-                height={40}
-                className="links-list__icon"
-              />
-            </Link>
+            <div className="follow__bttn links-list icon ">
+                <Link
+                  href="#start"
+                  className="bttn__follow"
+                >
+                  Get Started
+                </Link>
+              </div>
           </div>
         </div>
         <img
@@ -114,7 +56,7 @@ const Community = () => {
           <div className="grid-12 join-the-community__item join-the-community__item--twiter">
             <div className="join-the-community__header">
               <span className="join-the-community__header-name">
-                Dogelon Mars
+                Elon Musk
               </span>
               <span className="join-the-community__header-name-socmedia">
                 Twitter
@@ -127,18 +69,18 @@ const Community = () => {
                 />
               </span>
             </div>
-            <div className="join-the-community__nick-name">@DogelonMars</div>
+            <div className="join-the-community__nick-name">@elonmusk</div>
             <div className="join-the-community__title">
-              I am Dogelon. Dogelon Mars. Join me and together we will reach the
+              I am Elon Musk. Join me and together we will reach the
               stars...
             </div>
             <div className="join-the-community__follow">
-              <span className="follow__amount">650K+</span>
+              <span className="follow__amount">127.7M+</span>
               <span className="follow__followers">followers</span>
-              <div className="follow__bttn">
+              <div className="follow__bttn ">
                 <Link
                   target="_blank"
-                  href="https://twitter.com/dogelonmars"
+                  href="https://twitter.com/elonmusk"
                   className="bttn__follow"
                 >
                   Follow
@@ -153,10 +95,10 @@ const Community = () => {
               />
             </div>
           </div>
-          <div className="grid-12 join-the-community__item join-the-community__item--telegram">
+          {/* <div className="grid-12 join-the-community__item join-the-community__item--telegram">
             <div className="join-the-community__header">
               <span className="join-the-community__header-name">
-                Dogelon Mars
+                Elon Musk
               </span>
               <span className="join-the-community__header-name-socmedia">
                 Telegram
@@ -170,19 +112,18 @@ const Community = () => {
               </span>
             </div>
             <div className="join-the-community__nick-name">
-              https://t.me/DogelonMars
+              https://t.me/Elon
             </div>
             <div className="join-the-community__title">
-              I am Dogelon. Dogelon Mars. Join me and together we will reach the
+              I am Elon Musk. Join me and together we will reach the
               stars...
             </div>
             <div className="join-the-community__follow">
-              <span className="follow__amount">90K+</span>
+              <span className="follow__amount">100M+</span>
               <span className="follow__followers">followers</span>
               <div className="follow__bttn">
                 <Link
-                  target="_blank"
-                  href="https://t.me/dogelonmars"
+                  href="#start"
                   className="bttn__follow"
                 >
                   Follow
@@ -196,24 +137,23 @@ const Community = () => {
                 alt=""
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="get-stiker-pack grid-12">
           <div className="get-stiker-pack__title">
-            <span className="heading">Get the Dogelon Mars sticker pack!</span>
-            <img
+            <span className="heading">Become a Lucky Winner Today!</span>
+            {/* <img
               src="img/small-logo-telegram.svg"
               alt=""
               className="get-stiker-pack__small-icon-tg"
-            />
+            /> */}
           </div>
           <div className="get-stiker-pack__bttn-wrap">
             <Link
-              target="_blank"
-              href="https://t.me/addstickers/DogelonMarsStickers"
+              href="#start"
               className="get-stiker-pack__bttn"
             >
-              Download
+              Get Started
             </Link>
           </div>
         </div>
